@@ -1,0 +1,240 @@
+html {
+	height: 100vh;
+}
+@font-face {
+	font-family: 'ShareTechMono';
+	src: url('ShareTechMono-Regular.ttf') format('truetype');
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+.main-page {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.navbar {
+	display :flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: 'ShareTechMono';
+	border-bottom: 2px solid black;
+}
+
+.name {
+	font-size: 1.75rem;
+	margin: 0.5rem;
+}
+
+.navbar-links ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+.navbar-links li {
+	list-style: none;
+	padding: 1rem;
+	display: block;
+}
+
+.navbar-links li:hover {
+	background-color: #ddd;
+	cursor: pointer;
+}
+
+.toggle-button {
+	position: absolute;
+	top: 0.75rem;
+	right: 1rem;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30px;
+	height: 21px;
+}
+
+.toggle-button .bar {
+	height: 3px;
+	width: 100%;
+	background: #000;
+	border-radius: 10px;
+	
+}
+
+.default-bottom {
+	animation: 0.1s forwards linear rotateClockwiseReverse;
+}
+
+.default-top {
+	animation: 0.1s forwards linear rotateCounterClockwiseReverse;
+}
+
+.default-middle {
+	animation: 0.1s forwards linear disappearMiddleReverse;
+}
+
+.rotate-bottom {
+	animation: 0.1s forwards linear rotateClockwise;
+}
+
+.rotate-top {
+	animation: 0.1s forwards linear rotateCounterClockwise;
+}
+
+.rotate-middle {
+	transform-origin: left center;
+	animation: 0.1s forwards linear disappearMiddle;
+}
+
+@keyframes rotateClockwise {
+	0% {
+		transform-origin: right top;
+		transform: scaleX(1) rotate(0deg);
+	}
+	100% {
+		transform-origin: right top;
+		transform: scaleX(1.22) rotate(35deg);
+	}
+}
+
+@keyframes rotateClockwiseReverse {
+	0% {
+		transform-origin: right top;
+		transform: scaleX(1.22) rotate(35deg);
+	}
+	100% { 
+		transform-origin: right top;
+		transform: scaleX(1) rotate(0deg);
+	}
+}
+
+@keyframes rotateCounterClockwise {
+	0% {
+		transform-origin: right bottom;
+		transform: scaleX(1) rotate(0deg);
+	}
+	100% {
+		transform-origin: right bottom;
+		transform: scaleX(1.22) rotate(-35deg);
+	}
+}
+
+@keyframes rotateCounterClockwiseReverse {
+	0% {
+		transform-origin: right bottom;
+		transform: scaleX(1.22) rotate(-35deg);
+	}
+	100% {
+		transform-origin: right bottom;
+		transform: scaleX(1) rotate(0deg);
+	}
+}
+
+@keyframes disappearMiddle {
+	0% {
+		width: 100%;
+	}
+	100% {
+		width: 0%;
+	}
+}
+
+@keyframes disappearMiddleReverse {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+@keyframes drawerExpand {
+	0% {
+		opacity: 0;
+		height: 0;
+	}
+
+	100% {
+		opacity: 1;
+		height: 100%;
+	}
+}
+
+@keyframes drawerExpandReverse {
+	0% {
+		opacity: 1;
+		height: 100%;
+	}
+
+	100% {
+		opacity: 0;
+		height: 0;
+	}
+}
+
+
+@media screen and (max-width: 800px) {
+	
+	.toggle-button {
+		display: flex;
+	}
+
+	.navbar-links {
+		display: flex;
+		width: 100%;
+		height: 0;
+		overflow: hidden;
+		border-bottom: 2px solid black;
+	}
+
+	.navbar {
+		flex-direction: column;
+		align-items: flex-start;
+		border-bottom: none;
+	}
+
+	.navbar-links ul {
+		width: 100%;
+		flex-direction: column;
+	}
+
+	.navbar-links li {
+		text-align: center;
+		padding: 0.5rem 1rem;
+	}
+
+	.navbar-links.active {
+		animation: 0.1s linear forwards drawerExpand;
+	}
+	
+	.navbar-links.inactive {
+		animation: none;
+	}
+}
+
+.main-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+		
+.title {
+	font-family: "ShareTechMono";
+	font-size: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
