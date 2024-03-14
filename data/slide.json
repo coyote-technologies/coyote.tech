@@ -1,0 +1,11 @@
+[
+  {
+    "title": "Coyote Technologies",
+    "image": "img/slide/slide01.jpg"
+  },
+  {
+    "title": "We've got your back",
+    "image": "img/slide/slide02.jpg",
+    "color": "text-black"
+  }
+]

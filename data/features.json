@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Flexible",
+    "description": "We meet your business wherever you're at.",
+    "icon": "fa-regular fa-handshake"
+  },
+  {
+    "title": "Fast",
+    "description": "We will race you to the finish line!",
+    "icon": "fa-solid fa-bolt"
+  },
+  {
+    "title": "Secure",
+    "description": "Safety and Security are our top priorities.",
+    "icon": "fa-solid fa-lock",
+    "link": "https://github.com/coyote-technologies"
+  }
+]
