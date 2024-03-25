@@ -4,8 +4,8 @@ description = "About Coyote Technologies"
 date = "2024-03-13"
 aliases = ["cult-of-done", "makerbot", "contact"]
 author = "John"
+image = "img/cult_of_done.jpg"
 +++
-
 
 ## The cult of done is one of our core philosophies
 
